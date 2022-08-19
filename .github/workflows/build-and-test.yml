@@ -77,7 +77,7 @@ jobs:
           echo "inputs.path: ${{ inputs.path }}"
           echo "inputs.testdocc: ${{ inputs.testdocc }}"
           echo "matrix.configuration: ${{ matrix.configuration }}"
-          echo "cache key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}"
+          echo "cache key: ${{ runner.os }}-spm-${{ hashFiles('Package.resolved') }}"
     - name: Install Homebrew dependencies
       if: inputs.homebrewdependencies != ''
       run: brew install ${{ inputs.homebrewdependencies }}
